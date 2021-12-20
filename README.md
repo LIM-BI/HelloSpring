@@ -1,4 +1,10 @@
 
+// 2021-12-20
+-
+- memberServiceTest Junit 테스트
+- discount, order 패키지 생성, 인터페이스, 구현체 생성
+- OrderServiceTest Junit 테스트
+
 
 // 2021-12-16 
 -
