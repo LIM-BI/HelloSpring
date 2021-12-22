@@ -1,25 +1,32 @@
 package hello.core.order;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import hello.core.AppConfig;
 import hello.core.Grade;
 import hello.core.Member;
 import hello.core.MemberService;
-import hello.core.MemberServiceImpl;
 import order.Order;
 import order.OrderService;
-import order.OrderServiceImpl;
 
 public class OrderServiceTest {
+
+	MemberService memberService;
+	OrderService orderService;
 	
-	MemberService memberService = new MemberServiceImpl();
-	OrderService orderService = new OrderServiceImpl();
+	@BeforeEach
+	public void beforeEach() {
+		AppConfig appConfig = new AppConfig();
+		memberService = appConfig.memberService();
+		orderService = appConfig.orderService();
+	}
 	
 	@Test
 	void createOrder() {
 		Long memberId = 1L;
-		Member member = new Member(memberId, "memberA", Grade.VIP);
+		Member member = new Member(memberId, "memberA", Grade.BASIC);
 		
 		memberService.join(member);
 		
