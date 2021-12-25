@@ -11,7 +11,7 @@ import hello.core.Member;
 import hello.core.MemberService;
 
 @SpringBootTest
-public class memberServiceTest {
+public class MemberServiceTest {
 	
 	MemberService memberService;
 	

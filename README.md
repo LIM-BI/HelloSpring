@@ -1,3 +1,28 @@
+// 2021-12-25
+-
+- 등록된 모든 빈 출력 테스트
+- // ROLE_APPLICATION : 직접 등록한 어플리케이션 빈
+- // ROLE_INFRASTRUCTURE : 스프링이 내부에서 사용하는 빈 
+- 스프링 빈 조회 getBean(이름, 타입)
+- 실패 테스트까지 완료
+- 같은 타입의 빈이 둘 이상 있을때 테스트
+-
+- BeanFactory
+- 스프링 컨테이너의 최상위 인터페이스
+- 스프링 빈을 관리하고 조회하는 역할을 담당한다.
+- 'getBean()'을 제공
+- 지금까지 공부했던 대부분의 기능은 BeanFactory가 제공하는 기능이다.
+-
+- ApplicationContext
+- BeanFactory의 기능을 모두 상속받는다.(BeanFactory를 직접 사용할 일은 거의 없다.)
+- ApplicationContext가 상속받는 인터페이스들
+- MessageSource(한국에서 들어오면 한국어로, 영어권에서 들어오면 영어로 출력)
+- EnvironmentCapable(로컬, 개발, 운영등을 구분해서 처리)
+- ApplicationEventPublisher(이벤트를 발행하고 구독하는 모델을 편리하게 지원)
+- ResourceLoader(파일, 클래스패스, 외부 등에서 리소스를 편리하게 조회)
+
+
+
 // 2021-12-22
 -
 - 스프링 코드 작성 시작
