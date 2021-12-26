@@ -42,7 +42,7 @@ public class FindBean {
 	@DisplayName("빈 이름으로 조회X")
 	void findBeanByNameX() {
 		assertThrows(NoSuchBeanDefinitionException.class,
-				() -> ac.getBean("memberService", MemberService.class));
+				() -> ac.getBean("XXX", MemberService.class));
 	}
 
 }
