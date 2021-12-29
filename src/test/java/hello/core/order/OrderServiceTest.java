@@ -8,8 +8,8 @@ import hello.core.AppConfig;
 import hello.core.Grade;
 import hello.core.Member;
 import hello.core.MemberService;
-import order.Order;
-import order.OrderService;
+import hello.core.order.Order;
+import hello.core.order.OrderService;
 
 public class OrderServiceTest {
 

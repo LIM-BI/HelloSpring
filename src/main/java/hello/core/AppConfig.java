@@ -3,10 +3,10 @@ package hello.core;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import discount.DiscountPolicy;
-import discount.RateDiscountPolicy;
-import order.OrderService;
-import order.OrderServiceImpl;
+import hello.core.discount.DiscountPolicy;
+import hello.core.discount.RateDiscountPolicy;
+import hello.core.order.OrderService;
+import hello.core.order.OrderServiceImpl;
 
 @Configuration
 public class AppConfig {

@@ -4,9 +4,9 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import discount.RateDiscountPolicy;
 import hello.core.Grade;
 import hello.core.Member;
+import hello.core.discount.RateDiscountPolicy;
 
 public class RateDiscountPolicyTest {
 

@@ -1,4 +1,4 @@
-package order;
+package hello.core.order;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
