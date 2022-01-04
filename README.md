@@ -1,3 +1,25 @@
+
+// 2022-01-04
+-
+- 롬복 라이브러리 추가
+- 롬복 설치
+- HelloLombok 클래스 추가
+- @RequiredArgsConstructor → final 붙은 클래스의 생성자를 자동으로 만들어준다.
+-
+- 조회 빈이 2개 이상인 경우 해결방법
+- 1. @Autowired (첫번째로 타입 매칭을 하고 만약 빈이 2개 이상일 경우, 파라미터 이름으로 빈 이름을 추가 매칭한다. 필드 혹은 생성자)
+-   → @Autowired private DiscountPolicy rateDiscountPolicy
+-   → @Autowired 생성장
+- 2. @Qualifier("이름") (구분자로써 필드나 생성자 파라미터에 @Qualifier("이름") 작성해주면 해당이름의 빈으로 찾아와서 주입해준다.)
+-   → Qualifier끼리 매칭, 빈이름 매칭, 그래도 없으면 NoSuchBeanDefinitionException 예외 발생
+- 3. @Primary (우선 순위를 지정)
+-   → 해당 어노테이션이 붙은 빈이 우선 선택된다.
+-
+- * @Qualifier와 @Primary 중 @Qualifier가 우선권을 가진다.
+-
+- 어노테이션 직접 만들기
+
+
 // 2022-01-03
 -
 - 옵션처리 
