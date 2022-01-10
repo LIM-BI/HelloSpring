@@ -7,7 +7,7 @@ import hello.core.Member;
 import hello.core.annotation.MainDiscountPolicy;
 
 @Component	
-@MainDiscountPolicy
+//@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy{
 	private int discountPercent = 10;
 	
