@@ -1,9 +1,9 @@
 package lifecycle;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
-public class NetworkClient implements InitializingBean, DisposableBean {
+public class NetworkClient {
 
 	private String url;
 	
@@ -29,16 +29,43 @@ public class NetworkClient implements InitializingBean, DisposableBean {
 		System.out.println("disconnect : " + url);
 	}
 
-	@Override
-	public void afterPropertiesSet() throws Exception {
+	/*implements InitializingBean, DisposableBean 사용 */ 
+//	@Override
+//	public void afterPropertiesSet() throws Exception {
+//		System.out.println("afterPropertiesSet");
+//		connect();
+//		call("초기화 연결 메시지");
+//	}
+//	
+//	@Override
+//	public void destroy() throws Exception{
+//		System.out.println("destroy");
+//		disconnect();
+//	}
+	
+	/*@Bean(initMethod="init", destroyMethod="close" 사용 */ 
+//	public void init() {
+//		System.out.println("afterPropertiesSet");
+//		connect();
+//		call("초기화 연결 메시지");
+//	}
+//	
+//	public void close() {
+//		System.out.println("destroy");
+//		disconnect();
+//	}
+	
+	@PostConstruct
+	public void init() {
 		System.out.println("afterPropertiesSet");
 		connect();
 		call("초기화 연결 메시지");
 	}
-	
-	@Override
-	public void destroy() throws Exception{
+	@PreDestroy
+	public void close() {
 		System.out.println("destroy");
 		disconnect();
 	}
+
+
 }
